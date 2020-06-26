@@ -1,6 +1,6 @@
 import React from 'react';
 import 'firebase/auth';
-import { useFirebaseApp, useUser } from 'reactfire';
+import { useFirebaseApp } from 'reactfire';
 
 const Header = ({ name }) => {
 

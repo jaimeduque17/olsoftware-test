@@ -12,7 +12,7 @@ function App() {
     <div>
       {user ? <Header name={user.email} /> : null}
       {!user && <Auth />}
-      {user ? <Users /> : null}
+      {user && <Users />}
     </div>
   );
 }
