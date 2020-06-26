@@ -1,19 +1,15 @@
 import React from 'react';
-import { useUser } from 'reactfire';
-import Auth from './components/Auth';
-import Header from './components/Header';
-import Users from './pages/Users';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
 
 function App() {
 
-  const user = useUser();
-
   return (
-    <div>
-      {user ? <Header name={user.email} /> : null}
-      {!user && <Auth />}
-      {user && <Users />}
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
+    </Router>
   );
 }
 
