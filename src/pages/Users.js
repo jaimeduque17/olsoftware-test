@@ -62,23 +62,24 @@ const Users = () => {
 
     return (
         <>
-            <div className="jumbotron jumbotron-fluid">
-                <div className="container">
-                    <h1 className="display-4 text-center">Registrar usuarios</h1>
-                </div>
-                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#modal">
-                    <strong>Crear</strong>
-                </button>
-            </div>
             <div className="row">
                 <Modal
                     titleModal={currentId === '' ? 'Agregar nuevo usuario' : 'Modificar usuario'}
                 >
                     <UserForm {...({ addOrEdit, currentId, usersObj })} />
                 </Modal>
-                <div className="col-md-7">
-                    <table className="table table-borderless table-stripped">
-                        <thead className="thead-light">
+                <div className="container-fluid">
+                    <div className="container-fluid row ml-1 mb-5 mt-3 d-flex justify-content-between">
+                        <h4 className="text-primary">
+                            <i className="fas fa-users"></i>
+                            <span className="ml-2">Usuario existentes</span>
+                        </h4>
+                        <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#modal">
+                            <strong>Crear</strong>
+                        </button>
+                    </div>
+                    <table className="table">
+                        <thead>
                             <tr>
                                 <th>Nombres</th>
                                 <th>Apellidos</th>
@@ -100,7 +101,7 @@ const Users = () => {
                                     <td>{usersObj[id].state}</td>
                                     <td>{usersObj[id].mobile}</td>
                                     <td>{usersObj[id].email}</td>
-                                    <td style={{display: 'flex'}}>
+                                    <td style={{ display: 'flex' }}>
                                         <a href="!#" className="btn text-primary" data-toggle="modal" data-target="#modal" onClick={() => setCurrentId(id)}>
                                             <i className="fas fa-pencil-alt"></i>
                                         </a>

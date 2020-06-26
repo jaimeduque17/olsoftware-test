@@ -13,7 +13,7 @@ const Header = ({ name }) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <i className="fas fa-bars text-primary mr-4" style={{ fontSize: '24px' }}></i>
-            <strong className="text-primary">Prueba Front-end</strong>
+            <strong className="text-primary" style={{fontSize: '24px'}}>Prueba Front-end</strong>
             <div className="navbar-nav mr-auto" />
             <i className="fas fa-user-circle text-secondary mr-4" style={{ fontSize: '36px' }}></i>
             <span>{name}</span>
