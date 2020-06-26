@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import UserForm from '../components/UserForm';
+import Modal from '../components/Modal';
 import DB from '../firebase/config';
 
 const Users = () => {
@@ -65,11 +66,16 @@ const Users = () => {
                 <div className="container">
                     <h1 className="display-4 text-center">Registrar usuarios</h1>
                 </div>
+                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#modal">
+                    <strong>Crear</strong>
+                </button>
             </div>
             <div className="row">
-                <div className="col-md-5">
+                <Modal
+                    titleModal={currentId === '' ? 'Agregar nuevo usuario' : 'Modificar usuario'}
+                >
                     <UserForm {...({ addOrEdit, currentId, usersObj })} />
-                </div>
+                </Modal>
                 <div className="col-md-7">
                     <table className="table table-borderless table-stripped">
                         <thead className="thead-light">
@@ -94,11 +100,11 @@ const Users = () => {
                                     <td>{usersObj[id].state}</td>
                                     <td>{usersObj[id].mobile}</td>
                                     <td>{usersObj[id].email}</td>
-                                    <td>
-                                        <a href="!#" className="btn text-primary" onClick={() => { setCurrentId(id) }}>
+                                    <td style={{display: 'flex'}}>
+                                        <a href="!#" className="btn text-primary" data-toggle="modal" data-target="#modal" onClick={() => setCurrentId(id)}>
                                             <i className="fas fa-pencil-alt"></i>
                                         </a>
-                                        <a href="!#" className="btn text-danger" onClick={() => onDelete(id)}>
+                                        <a href="!#" className="btn text-secondary" onClick={() => onDelete(id)}>
                                             <i className="fas fa-trash-alt"></i>
                                         </a>
                                     </td>

@@ -19,11 +19,11 @@ const UserForm = (props) => {
         if (props.currentId === '') {
             setValues({
                 ...initialValues
-            }) 
+            })
         } else {
             setValues({
                 ...props.usersObj[props.currentId]
-            }) 
+            })
         }
     }, [props.currentId, props.usersObj]);
 
@@ -146,7 +146,7 @@ const UserForm = (props) => {
                         onChange={handleChange}
                     />
                 </div>
-                <div className="form-group input-group  col-md-6">
+                <div className="form-group input-group col-md-6">
                     <div className="input-group-prepend">
                         <div className="input-group-text">
                             <i className="fas fa-envelope" />
@@ -161,8 +161,9 @@ const UserForm = (props) => {
                     />
                 </div>
             </div>
-            <div className="form-group">
-                <input type="submit" value={props.currentId === '' ? "Save" : "Update"} className="btn btn-primary btn-block" />
+            <div className="modal-footer justify-content-center">
+                <button type="submit" className="btn btn-success" data-toggle="modal" data-target="#modal">Aceptar</button>
+                <button type="button" className="btn btn-outline-success" data-dismiss="modal">Cancelar</button>
             </div>
         </form>
     );
