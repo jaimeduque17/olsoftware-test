@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import UserForm from '../components/UserForm';
-import Modal from '../components/Modal';
+import UserForm from './UserForm';
+import Modal from './Modal';
 import DB from '../firebase/config';
 
 const Users = () => {
@@ -102,10 +102,10 @@ const Users = () => {
                                     <td>{usersObj[id].mobile}</td>
                                     <td>{usersObj[id].email}</td>
                                     <td style={{ display: 'flex' }}>
-                                        <a href="!#" className="btn text-primary" data-toggle="modal" data-target="#modal" onClick={() => setCurrentId(id)}>
+                                        <a href="/" className="btn text-primary" data-toggle="modal" data-target="#modal" onClick={() => setCurrentId(id)}>
                                             <i className="fas fa-pencil-alt"></i>
                                         </a>
-                                        <a href="!#" className="btn text-secondary" onClick={() => onDelete(id)}>
+                                        <a href="/" className="btn text-secondary" onClick={() => onDelete(id)}>
                                             <i className="fas fa-trash-alt"></i>
                                         </a>
                                     </td>

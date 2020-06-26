@@ -45,7 +45,7 @@ const UserForm = (props) => {
                 <div className="form-group input-group col-md-6">
                     <div className="input-group-prepend">
                         <div className="input-group-text">
-                            <i className="fas fa-user"></i>
+                            <i className="fas fa-users"></i>
                         </div>
                     </div>
                     <input
