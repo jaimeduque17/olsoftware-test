@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'firebase/auth';
 import { useFirebaseApp } from 'reactfire';
-import Town from '../assets/images/town.png';
+import TownImage from '../assets/images/town.png';
 
 const Auth = () => {
 
@@ -20,7 +20,7 @@ const Auth = () => {
 
     return (
         <div>
-            <img src={Town} style={{ opacity: '70%', objectFit: 'cover', zIndex: 1, position: 'absolute', height: '80%', width: '80%', borderBottomLeftRadius: '600% 550%', borderBottomRightRadius: '680% 1100%' }} />
+            <img alt="town" src={TownImage} style={{ opacity: '70%', objectFit: 'cover', zIndex: 1, position: 'absolute', height: '80%', width: '80%', borderBottomLeftRadius: '600% 550%', borderBottomRightRadius: '680% 1100%' }} />
             <strong style={{ color: 'white', float: 'left', zIndex: 2, position: 'absolute', top: '30%', left: '15%', fontSize: '2rem' }}>Aplicación</strong>
             <strong style={{ color: 'white', float: 'left', zIndex: 2, position: 'absolute', top: '35%', left: '15%', fontSize: '2rem' }}>OLSoftware</strong>
             <strong style={{ color: 'white', float: 'left', zIndex: 2, position: 'absolute', top: '45%', left: '15%', fontSize: '1rem' }}>Prueba Práctica Front-end senior</strong>
@@ -44,12 +44,12 @@ const Auth = () => {
                         </div>
                     </div>
                     <div className="form-group">
-                        <a href="#" className="mb-3" onClick={signup}>
+                        <a href="#!" className="mb-3" onClick={signup}>
                             Crear cuenta
                         </a>
                     </div>
                     <button type="submit" onClick={login} className="input-group justify-content-center btn btn-primary mb-2">
-                        <strong>Iniciar sesión</strong>
+                    <strong>Iniciar sesión</strong>
                     </button>
                 </div>
             </div>

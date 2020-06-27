@@ -43,122 +43,58 @@ const UserForm = (props) => {
         <form autoComplete="off" onSubmit={handleForm}>
             <div className="form-row">
                 <div className="form-group input-group col-md-6">
-                    <div className="input-group-prepend">
-                        <div className="input-group-text">
-                            <i className="fas fa-users"></i>
-                        </div>
+                    <label htmlFor="name">Nombres</label>
+                    <div className="input-group">
+                        <input type="text" name="name" value={values.name} onChange={handleChange} className="form-control mb-1" />
                     </div>
-                    <input
-                        className="form-control"
-                        placeholder="Nombre"
-                        name="name"
-                        value={values.name}
-                        onChange={handleChange}
-                    />
                 </div>
                 <div className="form-group input-group col-md-6">
-                    <div className="input-group-prepend">
-                        <div className="input-group-text">
-                            <i className="fas fa-user" />
-                        </div>
+                <label htmlFor="name">Apellidos</label>
+                    <div className="input-group">
+                        <input type="text" name="lastName" value={values.lastName} onChange={handleChange} className="form-control mb-1" />
                     </div>
-                    <input
-                        className="form-control"
-                        placeholder="Apellido"
-                        name="lastName"
-                        value={values.lastName}
-                        onChange={handleChange}
-                    />
                 </div>
             </ div>
             <div className="form-row">
                 <div className="form-group input-group col-md-6">
-                    <div className="input-group-prepend">
-                        <div className="input-group-text">
-                            <i className="fas fa-mobile-alt" />
-                        </div>
+                <label htmlFor="name">Identificación</label>
+                    <div className="input-group">
+                        <input type="text" name="id" value={values.id} onChange={handleChange} className="form-control mb-1" />
                     </div>
-                    <input
-                        className="form-control"
-                        placeholder="Identificacion"
-                        name="id"
-                        value={values.id}
-                        onChange={handleChange}
-                    />
                 </div>
                 <div className="form-group input-group  col-md-6">
-                    <div className="input-group-prepend">
-                        <div className="input-group-text">
-                            <i className="fas fa-envelope" />
-                        </div>
+                <label htmlFor="name">Rol asociado</label>
+                    <div className="input-group">
+                        <input type="text" name="role" value={values.role} onChange={handleChange} className="form-control mb-1" />
                     </div>
-                    <input
-                        className="form-control"
-                        placeholder="Role"
-                        name="role"
-                        value={values.role}
-                        onChange={handleChange}
-                    />
                 </div>
             </div>
             <div className="form-row">
                 <div className="form-group input-group col-md-6">
-                    <div className="input-group-prepend">
-                        <div className="input-group-text">
-                            <i className="fas fa-mobile-alt" />
-                        </div>
+                <label htmlFor="name">Estado</label>
+                    <div className="input-group">
+                        <input type="text" name="state" value={values.state} onChange={handleChange} className="form-control mb-1" />
                     </div>
-                    <input
-                        className="form-control"
-                        placeholder="Estado"
-                        name="state"
-                        value={values.state}
-                        onChange={handleChange}
-                    />
                 </div>
                 <div className="form-group input-group  col-md-6">
-                    <div className="input-group-prepend">
-                        <div className="input-group-text">
-                            <i className="fas fa-envelope" />
-                        </div>
+                <label htmlFor="name">Contraseña</label>
+                    <div className="input-group">
+                        <input type="password" name="password" value={values.password} onChange={handleChange} className="form-control mb-1" />
                     </div>
-                    <input
-                        className="form-control"
-                        placeholder="Contraseña"
-                        name="password"
-                        value={values.password}
-                        onChange={handleChange}
-                    />
                 </div>
             </div>
             <div className="form-row">
                 <div className="form-group input-group col-md-6">
-                    <div className="input-group-prepend">
-                        <div className="input-group-text">
-                            <i className="fas fa-mobile-alt" />
-                        </div>
+                <label htmlFor="name">Teléfono</label>
+                    <div className="input-group">
+                        <input type="text" name="mobile" value={values.mobile} onChange={handleChange} className="form-control mb-1" />
                     </div>
-                    <input
-                        className="form-control"
-                        placeholder="Telefono"
-                        name="mobile"
-                        value={values.mobile}
-                        onChange={handleChange}
-                    />
                 </div>
                 <div className="form-group input-group col-md-6">
-                    <div className="input-group-prepend">
-                        <div className="input-group-text">
-                            <i className="fas fa-envelope" />
-                        </div>
+                <label htmlFor="name">Correo electrónico</label>
+                    <div className="input-group">
+                        <input type="text" name="email" value={values.email} onChange={handleChange} className="form-control mb-1" />
                     </div>
-                    <input
-                        className="form-control"
-                        placeholder="Correo electronico"
-                        name="email"
-                        value={values.email}
-                        onChange={handleChange}
-                    />
                 </div>
             </div>
             <div className="modal-footer justify-content-center">
