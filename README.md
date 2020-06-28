@@ -1,5 +1,6 @@
 # olsoftware-test
 React Single Page Application, la cual permite leer, crear, editar y eliminar usuarios, asi como tambien crear, iniciar y finalizar sesión gracias a la implementación de Firebase.
+
 ## Descripción
 ReactJS Single Page App con la siguiente caracteristica:
 1. CRUD: Crear, leer, actualizar y eliminar usuarios. 
@@ -35,8 +36,7 @@ $ npm start
 * Abrir (http://localhost:3000) en tu explorar de internet. 
 * Esto debería correr la aplicación
 ```
-
-
+```
 ## Authors
 * **Jaime Duque** - (https://github.com/jaimeduque17)
 
