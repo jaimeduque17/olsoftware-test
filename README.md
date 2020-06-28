@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# olsoftware-test
+React Single Page Application, la cual permite leer, crear, editar y eliminar usuarios, asi como tambien crear, iniciar y finalizar sesión gracias a la implementación de Firebase.
+## Descripción
+ReactJS Single Page App con la siguiente caracteristica:
+1. CRUD: Crear, leer, actualizar y eliminar usuarios. 
 
-## Available Scripts
 
-In the project directory, you can run:
+## Librerias/Componentes usados
+* create-react-app: Kit de inicio para crear una app reactjs.
+* bootstrap: Para estilos y diseño basico.
+* react-router-dom: Para el enrutamiento entre las pantallas.
+* material-ui: Para la creación del sidebar.
+* firebase y reactfire: para la conexión de la aplicación co Firebase.
 
-### `yarn start`
+## Primeros pasos e instalación
+Estas instrucciones le proporcionarán una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba. Consulte la implementación para obtener notas sobre cómo implementar el proyecto en un sistema en vivo.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Primero clone el repositorio en su computador
+```
+git clone https://github.com/jaimeduque17/olsoftware-test.git
+```
+* Abre tu terminal de preferencia y accede a la ubicación en la cual lo descargó para proceder a abrirlo
+```
+$ cd olsoftware-test
+$ npm install
+```
+* Esto debería instalar todas las dependencias. Una vez hecho
+* Correr 
+``` 
+$ yarn start
+ó
+$ npm start
+```
+* para iniciar el servidor.
+* Abrir (http://localhost:3000) en tu explorar de internet. 
+* Esto debería correr la aplicación
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Authors
+* **Jaime Duque** - (https://github.com/jaimeduque17)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## License
+This project is licensed under the MIT License

@@ -48,7 +48,7 @@ const Users = () => {
     }
 
     const onDelete = (u) => {
-        if (window.confirm('Are you sure to delete this record?')) {
+        if (window.confirm('¿Estás seguro de borrar este registro?')) {
             DB.child(`users/${u}`).remove(
                 err => {
                     if (err) {

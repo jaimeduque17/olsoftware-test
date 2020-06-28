@@ -1,12 +1,11 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -15,10 +14,15 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import MapSharpIcon from '@material-ui/icons/MapSharp';
+import ListSharpIcon from '@material-ui/icons/ListSharp';
+import NoteSharpIcon from '@material-ui/icons/NoteSharp';
+import PersonSharpIcon from '@material-ui/icons/PersonSharp';
+import SupervisorAccountSharpIcon from '@material-ui/icons/SupervisorAccountSharp';
+import TuneSharpIcon from '@material-ui/icons/TuneSharp';
+import { grey } from '@material-ui/core/colors';
 import 'firebase/auth';
-import { useFirebaseApp, useUser } from 'reactfire';
+import { useUser } from 'reactfire';
 import Header from './Header';
 
 const drawerWidth = 240;
@@ -87,7 +91,6 @@ const useStyles = makeStyles((theme) => ({
     },
     content: {
         flexGrow: 1,
-        padding: theme.spacing(3),
         padding: 0,
     },
     minHeght: {
@@ -95,7 +98,15 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function MiniDrawer({ children }) {
+const isActive = (history, path) => {
+    if (history.location.pathname === path) {
+        return { color: grey[500] };
+    } else {
+        return { color: grey[50] };
+    }
+}
+
+const MiniDrawer = ({ children, history }) => {
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
@@ -131,9 +142,9 @@ export default function MiniDrawer({ children }) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" noWrap>
+                    <div className="container-fluid" style={{ display: 'contents' }}>
                         {user ? <Header name={user.email} /> : null}
-                    </Typography>
+                    </div>
                 </Toolbar>
             </AppBar>}
             {user && <Drawer
@@ -155,19 +166,61 @@ export default function MiniDrawer({ children }) {
                     </IconButton>
                 </div>
                 <Divider />
-                <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    ))}
-                </List>
+                <Link to='/programation'>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <MapSharpIcon className="mr-5" style={isActive(history, '/programation')} />
+                            <ListItemText primary={'Programación'} style={isActive(history, '/programation')} />
+                        </ListItemIcon>
+                    </ListItem>
+                </Link>
+                <Link to='/operation'>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <ListSharpIcon className="mr-5" style={isActive(history, '/operation')} />
+                            <ListItemText primary={'Operaciones'} style={isActive(history, '/operation')} />
+                        </ListItemIcon>
+                    </ListItem>
+                </Link>
+                <Link to='/profile'>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <TuneSharpIcon className="mr-5" style={isActive(history, '/profile')} />
+                            <ListItemText primary={'Perfiles'} style={isActive(history, '/profile')} />
+                        </ListItemIcon>
+                    </ListItem>
+                </Link>
+                <Link to='/'>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <SupervisorAccountSharpIcon className="mr-5" style={isActive(history, '/')} />
+                            <ListItemText primary={'Usuario'} style={isActive(history, '/')} />
+                        </ListItemIcon>
+                    </ListItem>
+                </Link>
+                <Link to='/user'>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <PersonSharpIcon className="mr-5" style={isActive(history, '/user')} />
+                            <ListItemText primary={'Usuario'} style={isActive(history, '/user')} />
+                        </ListItemIcon>
+                    </ListItem>
+                </Link>
+                <Link to='/report'>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <NoteSharpIcon className="mr-5" style={isActive(history, '/report')} />
+                            <ListItemText primary={'Reportes'} style={isActive(history, '/report')} />
+                        </ListItemIcon>
+                    </ListItem>
+                </Link>
             </Drawer>}
             <main className={classes.content}>
                 {user && <div className={classes.toolbar} />}
                 {children}
             </main>
-        </div>
+        </div >
     );
 }
+
+export default withRouter(MiniDrawer);
