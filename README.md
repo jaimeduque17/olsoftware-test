@@ -11,7 +11,7 @@ ReactJS Single Page App con la siguiente caracteristica:
 * bootstrap: Para estilos y diseño basico.
 * react-router-dom: Para el enrutamiento entre las pantallas.
 * material-ui: Para la creación del sidebar.
-* firebase y reactfire: para la conexión de la aplicación co Firebase.
+* firebase y reactfire: para la conexión de la aplicación con Firebase.
 
 ## Primeros pasos e instalación
 Estas instrucciones le proporcionarán una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba. Consulte la implementación para obtener notas sobre cómo implementar el proyecto en un sistema en vivo.
